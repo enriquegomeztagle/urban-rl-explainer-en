@@ -1,0 +1,7 @@
+streamlit
+langchain-openai
+langchain-core
+pydantic
+loguru
+requests
+python-dotenv
