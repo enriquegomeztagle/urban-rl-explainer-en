@@ -6,7 +6,7 @@ Interactive system for explaining Reinforcement Learning agent decisions applied
 
 This web portal allows explaining the decisions of an urban RL agent at **three different technical levels**:
 
-- **Level 1 - Common Language**: For general public without technical knowledge
+- **Level 1 - Common Language**: For general audience without technical knowledge
 - **Level 2 - Professional**: For architects and urban planners with specialized terminology
 - **Level 3 - RL Technical**: For data scientists and RL/ML researchers
 
