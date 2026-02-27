@@ -353,8 +353,8 @@ Domain: RL Research in Urban Planning
 
 ## Authors
 
--   Enrique Ulises Baez Gomez Tagle\
--   Daniel Adrián Contreras Olivas\
+-   Enrique Ulises Baez Gomez Tagle
+-   Daniel Adrián Contreras Olivas
 -   Francisco Javier Tallabs Utrilla
 
 GitHub: @enriquegomeztagle
