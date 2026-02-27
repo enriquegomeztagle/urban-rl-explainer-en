@@ -1,8 +1,8 @@
-# 🏙️ Explainable AI Framework for Urban RL Agent Decisions
+# Explainable AI Framework for Urban RL Agent Decisions
 
 ------------------------------------------------------------------------
 
-## 📋 System Overview
+## System Overview
 
 This web-based platform facilitates the interpretation of an urban RL
 agent's decisions across **three distinct technical strata**:
@@ -17,9 +17,9 @@ agent's decisions across **three distinct technical strata**:
 
 ------------------------------------------------------------------------
 
-## ✨ Core Capabilities
+## Core Capabilities
 
-### 🎚️ Dynamic Technical Stratification
+### Dynamic Technical Stratification
 
 -   Automated vocabulary modulation based on the target demographic.
 -   Three distinct complexity tiers governed by specialized prompt
@@ -27,28 +27,28 @@ agent's decisions across **three distinct technical strata**:
 -   Comparative analysis mode allowing simultaneous evaluation of all
     three response levels.
 
-### 💾 Intelligent Caching Mechanism
+### Intelligent Caching Mechanism
 
 -   MD5 hash-based caching to eliminate redundant API queries.
 -   Instantaneous data retrieval for previously processed queries.
 -   Significant optimization of computational latency and API
     operational costs.
 
-### 📊 Analytics and Telemetry
+### Analytics and Telemetry
 
 -   Generation latency tracking per query.
 -   Token utilization metrics (input/output).
 -   Cache hit-rate indicators.
 -   Comprehensive conversational logging and audibility.
 
-### 🔧 Flexible Configuration Protocol
+### Flexible Configuration Protocol
 
 -   User Interface (UI)-driven environment variable configuration.
 -   Advanced customization capabilities for system prompts.
 -   Predefined operational baselines (simplified and technical presets).
 -   Automated diagnostic alerts for missing configuration parameters.
 
-### 📜 Traceability and Auditing
+### Traceability and Auditing
 
 -   Exhaustive registry of all system interactions.
 -   Session-specific timestamps and performance metrics.
@@ -56,37 +56,37 @@ agent's decisions across **three distinct technical strata**:
 
 ------------------------------------------------------------------------
 
-# 🚀 Deployment and Operational Workflow
+# Deployment and Operational Workflow
 
-## 🔹 Prerequisites
+## Prerequisites
 
 -   Python 3.11 or higher.
 -   Access to an OpenAI-compatible API endpoint (e.g., OpenAI, Azure).
 
 ------------------------------------------------------------------------
 
-## 💻 Local Environment Setup
+## Local Environment Setup
 
-### 1️⃣ Clone the repository
+### Clone the repository
 
 ``` bash
 git clone https://github.com/enriquegomeztagle/urban-rl-explainer-es
 ```
 
-### 2️⃣ Initialize virtual environment
+### Initialize virtual environment
 
 ``` bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-### 3️⃣ Install dependencies
+### Install dependencies
 
 ``` bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Configure environment variables
+### Configure environment variables
 
 Create a `.env` file in the project's root directory:
 
@@ -96,7 +96,7 @@ OPENAI_BASE_URL=https://api.openai.com
 OPENAI_MODEL=gpt-4
 ```
 
-### 5️⃣ Execute the application
+### Execute the application
 
 ``` bash
 streamlit run app.py
@@ -108,7 +108,7 @@ http://localhost:8501
 
 ------------------------------------------------------------------------
 
-## 🐳 Docker Containerization
+## Docker Containerization
 
 ### Build the image
 
@@ -134,14 +134,14 @@ http://localhost:8501
 
 ------------------------------------------------------------------------
 
-# 🧭 User Protocol
+# User Protocol
 
-## 🔹 Initial Configuration
+## Initial Configuration
 
 Verify environment variables via the left sidebar and select the desired
 technical tier using the UI slider.
 
-## 🔹 Data Ingestion
+## Data Ingestion
 
 Utilize the "Load Example" function for predefined presets, or manually
 input:
@@ -152,21 +152,21 @@ input:
     the agent.
 -   **Query**: The specific question regarding the agent's decision.
 
-## 🔹 Response Generation
+## Response Generation
 
 -   **Isolated Mode**: Generates a singular response at the selected
     technical tier.
 -   **Comparative Mode**: Synthesizes all three technical responses
     simultaneously.
 
-## 🔹 Output Analysis
+## Output Analysis
 
 Review generation telemetry (latency, tokens, cache status), analyze the
 adapted explanation, and consult the interaction history.
 
 ------------------------------------------------------------------------
 
-# 🏗️ System Architecture
+# System Architecture
 
 ## Core Components
 
@@ -197,7 +197,7 @@ app.py
 
 ------------------------------------------------------------------------
 
-## 🔐 Caching Architecture
+## Caching Architecture
 
 -   **Cryptographic Key**:
     `MD5(objective + constraints + metrics + query + technical_tier)`
@@ -207,7 +207,7 @@ app.py
 
 ------------------------------------------------------------------------
 
-## 🧠 Prompt Synthesis Architecture
+## Prompt Synthesis Architecture
 
 -   **Shared Foundation**: Critical constraints universally applied
     across all tiers.
@@ -218,7 +218,7 @@ app.py
 
 ------------------------------------------------------------------------
 
-# 🔍 Advanced Mechanisms
+# Advanced Mechanisms
 
 ## Hallucination Mitigation Framework
 
@@ -246,7 +246,7 @@ app.py
 
 ------------------------------------------------------------------------
 
-# 📊 Available Metrics
+# Available Metrics
 
 -   **Generation Latency**: Total duration of the query execution.
 -   **Technical Tier**: The specific stratum utilized for the output.
@@ -258,7 +258,7 @@ app.py
 
 ------------------------------------------------------------------------
 
-# 🛠️ Technology Stack
+# Technology Stack
 
 -   **Streamlit**: Interactive web application framework.
 -   **LangChain**: LLM orchestration and integration.
@@ -268,7 +268,7 @@ app.py
 
 ------------------------------------------------------------------------
 
-# 📦 Dependencies
+# Dependencies
 
 Refer to `requirements.txt` for the exhaustive dependency manifest.
 
@@ -280,7 +280,7 @@ Primary libraries include:
 
 ------------------------------------------------------------------------
 
-# 🔒 Security Protocols
+# Security Protocols
 
 -   API keys are strictly managed via environment variables.
 -   Sensitive UI input fields utilize `type="password"` masking.
@@ -289,7 +289,7 @@ Primary libraries include:
 
 ------------------------------------------------------------------------
 
-# 🐛 Troubleshooting
+# Troubleshooting
 
 ### Exception: Missing Environment Variables
 
