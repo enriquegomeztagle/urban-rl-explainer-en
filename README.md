@@ -1,307 +1,360 @@
-# 🏙️ Urban RL Agent Decision Explainer
+# 🏙️ Explainable AI Framework for Urban RL Agent Decisions
 
-Interactive system for explaining Reinforcement Learning agent decisions applied to urban planning, with automatic technical vocabulary adaptation based on the audience.
+------------------------------------------------------------------------
 
-## 📋 Description
+## 📋 System Overview
 
-This web portal allows explaining the decisions of an urban RL agent at **three different technical levels**:
+This web-based platform facilitates the interpretation of an urban RL
+agent's decisions across **three distinct technical strata**:
 
-- **Level 1 - Common Language**: For general audience without technical knowledge
-- **Level 2 - Professional**: For architects and urban planners with specialized terminology
-- **Level 3 - RL Technical**: For data scientists and RL/ML researchers
+-   **Level 1 --- Layperson**: Designed for the general public,
+    utilizing accessible language devoid of technical jargon.
+-   **Level 2 --- Professional**: Tailored for architects and urban
+    planners, employing domain-specific urban design terminology.
+-   **Level 3 --- Technical RL**: Engineered for data scientists and
+    ML/RL researchers, utilizing advanced algorithmic and computational
+    nomenclature.
 
-## ✨ Main Features
+------------------------------------------------------------------------
 
-### 🎚️ Technical Levels System
+## ✨ Core Capabilities
 
-- Automatic vocabulary adaptation based on audience
-- Three complexity levels with specialized prompts
-- Comparison mode to view all three responses simultaneously
+### 🎚️ Dynamic Technical Stratification
 
-### 💾 Intelligent Caching System
+-   Automated vocabulary modulation based on the target demographic.
+-   Three distinct complexity tiers governed by specialized prompt
+    engineering.
+-   Comparative analysis mode allowing simultaneous evaluation of all
+    three response levels.
 
-- MD5-based cache to avoid duplicate queries
-- Instant responses for repeated queries
-- Cost reduction and response time improvement
+### 💾 Intelligent Caching Mechanism
 
-### 📊 Metrics and Analysis
+-   MD5 hash-based caching to eliminate redundant API queries.
+-   Instantaneous data retrieval for previously processed queries.
+-   Significant optimization of computational latency and API
+    operational costs.
 
-- Generation time per response
-- Token count (input/output)
-- Cache usage indicator
-- Complete conversation history
+### 📊 Analytics and Telemetry
 
-### 🔧 Flexible Configuration
+-   Generation latency tracking per query.
+-   Token utilization metrics (input/output).
+-   Cache hit-rate indicators.
+-   Comprehensive conversational logging and audibility.
 
-- Environment variables configurable from the interface
-- Advanced system prompt customization
-- Predefined presets (simple and technical)
-- Automatic alerts for missing configuration
+### 🔧 Flexible Configuration Protocol
 
-### 📜 History and Traceability
+-   User Interface (UI)-driven environment variable configuration.
+-   Advanced customization capabilities for system prompts.
+-   Predefined operational baselines (simplified and technical presets).
+-   Automated diagnostic alerts for missing configuration parameters.
 
-- Complete log of all queries
-- Timestamps and metrics per conversation
-- Ability to clear history and cache
+### 📜 Traceability and Auditing
 
-## 🚀 Installation and Usage
+-   Exhaustive registry of all system interactions.
+-   Session-specific timestamps and performance metrics.
+-   Administrator capabilities for cache and history purging.
 
-### Prerequisites
+------------------------------------------------------------------------
 
-- Python 3.11 or higher
-- Access to an OpenAI-compatible API (OpenAI, Azure, etc.)
+# 🚀 Deployment and Operational Workflow
 
-### Local Installation
+## 🔹 Prerequisites
 
-1. **Clone the repository**
+-   Python 3.11 or higher.
+-   Access to an OpenAI-compatible API endpoint (e.g., OpenAI, Azure).
 
-```bash
-git clone https://github.com/enriquegomeztagle/urban-rl-explainer-en.git
+------------------------------------------------------------------------
+
+## 💻 Local Environment Setup
+
+### 1️⃣ Clone the repository
+
+``` bash
+git clone https://github.com/enriquegomeztagle/urban-rl-explainer-es
 ```
 
-2. **Create virtual environment**
+### 2️⃣ Initialize virtual environment
 
-```bash
+``` bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. **Install dependencies**
+### 3️⃣ Install dependencies
 
-```bash
+``` bash
 pip install -r requirements.txt
 ```
 
-4. **Configure environment variables**
+### 4️⃣ Configure environment variables
 
-Create `.env` file in the project root:
+Create a `.env` file in the project's root directory:
 
-```env
+``` env
 OPENAI_API_KEY=your_api_key_here
 OPENAI_BASE_URL=https://api.openai.com
 OPENAI_MODEL=gpt-4
 ```
 
-5. **Run the application**
+### 5️⃣ Execute the application
 
-```bash
+``` bash
 streamlit run app.py
 ```
 
-The application will be available at `http://localhost:8501`
+The application will deploy locally at:
 
-### 🐳 Docker Installation
+http://localhost:8501
 
-1. **Build the image**
+------------------------------------------------------------------------
 
-```bash
+## 🐳 Docker Containerization
+
+### Build the image
+
+``` bash
 docker build -t rl-urbanism-explainer .
 ```
 
-2. **Run the container**
+### Run the container
 
-```bash
-docker run -p 8501:8501 \
-  -e OPENAI_API_KEY=your_api_key_here \
-  -e OPENAI_BASE_URL=https://api.openai.com \
-  -e OPENAI_MODEL=gpt-4 \
-  rl-urbanism-explainer
+``` bash
+docker run -p 8501:8501   -e OPENAI_API_KEY=your_api_key_here   -e OPENAI_BASE_URL=https://api.openai.com   -e OPENAI_MODEL=gpt-4   rl-urbanism-explainer
 ```
 
-Or using an `.env` file:
+### Alternatively, using the `.env` file:
 
-```bash
+``` bash
 docker run -p 8501:8501 --env-file .env rl-urbanism-explainer
 ```
 
-3. **Access the application**
+Access the application:
 
-Open browser at `http://localhost:8501`
+http://localhost:8501
 
-### 1. Initial Configuration
+------------------------------------------------------------------------
 
-- Verify that environment variables are configured (left sidebar)
-- Select the desired technical level with the slider
+# 🧭 User Protocol
 
-### 2. Load Data
+## 🔹 Initial Configuration
 
-- Use the "Load example" button for predefined presets
-- Or enter manually:
-  - **Agent objective**: What it seeks to optimize
-  - **Rules**: Constraints and policies
-  - **Calculations**: Metrics and evaluations performed
-  - **Question**: The specific query about the decision
+Verify environment variables via the left sidebar and select the desired
+technical tier using the UI slider.
 
-### 3. Generate Response
+## 🔹 Data Ingestion
 
-- **Individual Mode**: Generates response at the selected technical level
-- **Comparison Mode**: Generates all 3 responses simultaneously
+Utilize the "Load Example" function for predefined presets, or manually
+input:
 
-### 4. Review Results
+-   **Agent Objective**: The optimization target.
+-   **Policy Constraints**: Operational rules and restrictions.
+-   **Computational Metrics**: Calculations and evaluations performed by
+    the agent.
+-   **Query**: The specific question regarding the agent's decision.
 
-- View generation metrics (time, tokens, cache)
-- Review the explanation adapted to the selected level
-- Consult previous conversation history
+## 🔹 Response Generation
 
-## 🏗️ Technical Architecture
+-   **Isolated Mode**: Generates a singular response at the selected
+    technical tier.
+-   **Comparative Mode**: Synthesizes all three technical responses
+    simultaneously.
 
-### Main Components
+## 🔹 Output Analysis
 
-```
+Review generation telemetry (latency, tokens, cache status), analyze the
+adapted explanation, and consult the interaction history.
+
+------------------------------------------------------------------------
+
+# 🏗️ System Architecture
+
+## Core Components
+
+``` text
 app.py
-├── Configuration
-│   ├── Environment variables (OPENAI_API_KEY, BASE_URL, MODEL)
-│   ├── Session State (history, cache, metrics)
-│   └── Presets (technical and simple examples)
+├── Configuration Module
+│   ├── Environment Variables (OPENAI_API_KEY, BASE_URL, MODEL)
+│   ├── Session State Management (history, cache, metrics)
+│   └── Presets (technical and simplified baselines)
 │
-├── Prompt System
-│   ├── BASE_CRITICAL_RULES (shared rules)
-│   ├── SYSTEM_PROMPT_LEVEL_CONFIG (level configurations)
-│   └── build_system_prompt() (dynamic composition)
+├── Prompt Engineering Framework
+│   ├── BASE_CRITICAL_RULES (shared operational constraints)
+│   ├── SYSTEM_PROMPT_LEVEL_CONFIG (tier-specific configurations)
+│   └── build_system_prompt() (dynamic prompt synthesis)
 │
-├── Response Generation
-│   ├── generate_response_from_inputs() (with MD5 cache)
-│   ├── LangChain + ChatOpenAI
-│   └── Error handling and metrics
+├── Generation Pipeline
+│   ├── generate_response_from_inputs() (MD5 caching integration)
+│   ├── LangChain + ChatOpenAI integration
+│   └── Exception and telemetry management
 │
 └── Streamlit Interface
-    ├── Sidebar (env vars configuration)
-    ├── Technical level selector
-    ├── Input form
-    ├── Tabs (individual vs comparison)
-    └── Expanders (history and cache)
+    ├── Sidebar (environment configuration)
+    ├── Technical tier selector
+    ├── Data ingestion form
+    ├── Tabs (isolated vs. comparative views)
+    └── Expanders (history and cache auditing)
 ```
 
-### Caching System
+------------------------------------------------------------------------
 
-- **Key**: MD5(objective + rules + calculations + question + technical_level)
-- **Storage**: st.session_state (in memory)
-- **Benefits**: Instant responses, cost reduction
+## 🔐 Caching Architecture
 
-### Prompt Architecture
+-   **Cryptographic Key**:
+    `MD5(objective + constraints + metrics + query + technical_tier)`
+-   **Storage Protocol**: `st.session_state` (In-memory execution)
+-   **Systematic Benefits**: Near-instantaneous response times and
+    substantial cost reduction.
 
-1. **Shared base**: Critical rules common to all levels
-2. **Level configuration**: Role, task, extra rules, format, examples
-3. **Dynamic composition**: `build_system_prompt(level)` assembles the final prompt
+------------------------------------------------------------------------
 
-## 🔍 Advanced Features
+## 🧠 Prompt Synthesis Architecture
 
-### Anti-Hallucination System
+-   **Shared Foundation**: Critical constraints universally applied
+    across all tiers.
+-   **Tier-Specific Configuration**: Defined roles, tasks, supplementary
+    rules, formatting, and few-shot examples.
+-   **Dynamic Assembly**: `build_system_prompt(level)` function
+    aggregates the final contextual payload.
 
-The system includes multiple safeguards to prevent the LLM from inventing information:
+------------------------------------------------------------------------
 
-- Explicit critical rules in the prompt
-- Context validation
-- Instructions to respond "I don't know" when information is missing
-- Clear separation between format examples and real data
+# 🔍 Advanced Mechanisms
 
-### Progress Tracking
+## Hallucination Mitigation Framework
 
-- Multi-stage progress bars
-- Real-time processing states
-- Visual feedback of cache vs new generation
+-   Explicit critical constraints embedded within the foundational
+    prompt.
+-   Rigorous validation of provided contextual data.
+-   Strict directives mandating an "unknown" response state when data is
+    insufficient.
+-   Absolute delineation between structural formatting examples and
+    empirical data inputs.
 
-### Error Handling
+## Processing Telemetry
 
-- Connection error handling
-- Timeout handling
-- Descriptive error messages with suggested solutions
+-   Multi-stage execution progress indicators.
+-   Real-time processing state tracking.
+-   Visual feedback delineating cached retrieval versus novel
+    generation.
 
-## 📊 Available Metrics
+## Exception Management
 
-- **Generation time**: Total duration of the query
-- **Technical level**: Level used for the response
-- **Cache status**: Whether the response comes from cache
-- **Tokens**: Input/output token count (when available)
-- **Timestamp**: Timestamp of each conversation
+-   Robust connection error handling protocols.
+-   Timeout resolution handling.
+-   Descriptive error logging coupled with actionable resolution
+    pathways.
 
-## 🛠️ Technologies Used
+------------------------------------------------------------------------
 
-- **Streamlit**: Interactive web framework
-- **LangChain**: LLM integration
-- **OpenAI API**: Natural language generation
-- **Loguru**: Logging system
-- **Python-dotenv**: Environment variable management
+# 📊 Available Metrics
 
-## 📝 Dependencies
+-   **Generation Latency**: Total duration of the query execution.
+-   **Technical Tier**: The specific stratum utilized for the output.
+-   **Cache Status**: Binary indicator of whether the output was
+    retrieved from memory.
+-   **Token Utilization**: Aggregation of input/output tokens (where
+    supported by the API).
+-   **Timestamp**: Exact chronological marker of each interaction.
 
-See `requirements.txt` for the complete list of dependencies.
+------------------------------------------------------------------------
 
-Main ones:
+# 🛠️ Technology Stack
 
-- `streamlit`
-- `langchain-openai`
-- `loguru`
+-   **Streamlit**: Interactive web application framework.
+-   **LangChain**: LLM orchestration and integration.
+-   **OpenAI API**: Natural language generation engine.
+-   **Loguru**: Advanced logging framework.
+-   **Python-dotenv**: Environment variable management.
 
-## 🔐 Security
+------------------------------------------------------------------------
 
-- API keys are stored in environment variables
-- Input type="password" for sensitive fields in the UI
-- No credentials stored in source code
-- Recommended to use `.env` file
+# 📦 Dependencies
 
-## 🐛 Troubleshooting
+Refer to `requirements.txt` for the exhaustive dependency manifest.
 
-### Error: Missing environment variables
+Primary libraries include:
 
-**Solution**: Verify that `.env` contains all required variables or configure them from the sidebar.
+-   streamlit
+-   langchain-openai
+-   loguru
 
-### Error: Connection timeout
+------------------------------------------------------------------------
 
-**Solution**: Verify internet connectivity and validity of OPENAI_BASE_URL.
+# 🔒 Security Protocols
 
-### Error: Invalid API key
+-   API keys are strictly managed via environment variables.
+-   Sensitive UI input fields utilize `type="password"` masking.
+-   Zero credential hardcoding within the source code.
+-   Strong recommendation for localized `.env` file utilization.
 
-**Solution**: Check that OPENAI_API_KEY is valid and has necessary permissions.
+------------------------------------------------------------------------
 
-### Inconsistent responses
+# 🐛 Troubleshooting
 
-**Solution**: Clear cache from the "💾 Cache Statistics" expander.
+### Exception: Missing Environment Variables
 
-## 🚧 Known Limitations
+Resolution: Ensure the `.env` file contains all mandatory variables or
+configure them directly via the application sidebar.
 
-- Cache is volatile (lost when closing the session)
-- Maximum tokens per response: 1024 (configurable in code)
-- Requires internet connection for LLM queries
+### Exception: Connection Timeout
 
-## 📄 License
+Resolution: Verify network connectivity and validate the integrity of
+the `OPENAI_BASE_URL`.
 
-This project was developed for research purposes in urban planning using Reinforcement Learning agents and is intended solely for academic evaluation.
+### Exception: Invalid API Key
 
-### Copyright Notice
+Resolution: Confirm the `OPENAI_API_KEY` is active and possesses the
+requisite endpoint permissions.
 
-© 2025 Enrique Ulises Baez Gomez Tagle. All rights reserved.
+### Issue: Output Inconsistencies
 
-### Terms of Use
+Resolution: Purge the session cache via the "Cache Statistics" expander
+module.
 
-**Research and Evaluation Only**: This codebase is created specifically for academic research in urban planning using Reinforcement Learning techniques.
+------------------------------------------------------------------------
 
-**No Commercial Use**: This project cannot be used for commercial purposes without explicit written permission from the author.
+# 🚧 Known Limitations
 
-**No Redistribution**: The code cannot be redistributed, copied, or modified without authorization from the author.
+-   Cache memory is volatile and flushes upon session termination.
+-   Maximum output token constraint is capped at 1024 (programmatically
+    configurable).
+-   Requires an active internet connection for LLM API routing.
 
-**Attribution Required**: Any reference to this work must include proper attribution to the author.
+------------------------------------------------------------------------
 
-### Intellectual Property
+# 📄 Licensing and Usage Terms
 
-This project represents original work developed independently for research in urban planning and Reinforcement Learning. The architecture, implementation, and design decisions are intellectual property of the author.
+This codebase was developed exclusively for research purposes in urban
+planning utilizing Reinforcement Learning agents and is strictly
+intended for academic evaluation.
 
-### Contact
+## Copyright Notice
 
-For questions about this project or licenses, please contact:
+All rights reserved.
 
-- **Author**: Enrique Ulises Baez Gomez Tagle
-- **GitHub**: [@enriquegomeztagle](https://github.com/enriquegomeztagle)
-- **Purpose**: RL Research Project in Urban Planning
+## Terms of Use
 
----
+-   Research and Evaluation Only.
+-   No Commercial Usage without explicit written authorization.
+-   No Redistribution without prior consent.
+-   Attribution Required.
 
-## 👨‍💻 Author
+## Intellectual Property
 
-**Enrique Ulises Baez Gomez Tagle**
+This project constitutes original, independently developed work focusing
+on urban planning research and Explainable AI within Reinforcement
+Learning.
 
-GitHub: [@enriquegomeztagle](https://github.com/enriquegomeztagle)
+------------------------------------------------------------------------
 
----
+# 📫 Contact Information
 
-**Made with ❤️ for urban planning research and AI explainability**
+Domain: RL Research in Urban Planning
+
+## Authors
+
+-   Enrique Ulises Baez Gomez Tagle\
+-   Daniel Adrián Contreras Olivas\
+-   Francisco Javier Tallabs Utrilla
+
+GitHub: @enriquegomeztagle
