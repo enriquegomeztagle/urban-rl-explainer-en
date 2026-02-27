@@ -313,7 +313,7 @@ module.
 
 ------------------------------------------------------------------------
 
-# 🚧 Known Limitations
+# Known Limitations
 
 -   Cache memory is volatile and flushes upon session termination.
 -   Maximum output token constraint is capped at 1024 (programmatically
@@ -322,7 +322,7 @@ module.
 
 ------------------------------------------------------------------------
 
-# 📄 Licensing and Usage Terms
+# Licensing and Usage Terms
 
 This codebase was developed exclusively for research purposes in urban
 planning utilizing Reinforcement Learning agents and is strictly
@@ -347,7 +347,7 @@ Learning.
 
 ------------------------------------------------------------------------
 
-# 📫 Contact Information
+# Contact Information
 
 Domain: RL Research in Urban Planning
 
